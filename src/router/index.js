@@ -13,6 +13,10 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/detail",
+    component: () => import("@/views/detail/index.vue"),
+  },
 ];
 
 const router = createRouter({

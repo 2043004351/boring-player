@@ -23,6 +23,9 @@ importers:
       '@varlet/ui':
         specifier: ^3.13.0
         version: 3.13.0(vue@3.5.27)
+      fast-average-color:
+        specifier: ^9.5.0
+        version: 9.5.0
       vue:
         specifier: ^3.5.24
         version: 3.5.27
@@ -883,6 +886,10 @@ packages:
 
   exsolve@1.0.8:
     resolution: {integrity: sha512-LmDxfWXwcTArk8fUEnOfSZpHOJ6zOMUJKOtFLFqJLoKJetuQG874Uc7/Kki7zFLzYybmZhp1M7+98pfMqeX8yA==}
+
+  fast-average-color@9.5.0:
+    resolution: {integrity: sha512-nC6x2YIlJ9xxgkMFMd1BNoM1ctMjNoRKfRliPmiEWW3S6rLTHiQcy9g3pt/xiKv/D0NAAkhb9VyV+WJFvTqMGg==}
+    engines: {node: '>= 12'}
 
   fd-slicer@1.1.0:
     resolution: {integrity: sha512-cE1qsB/VwyQozZ+q1dGxR8LBYNZeofhEdUNGSMbQD3Gw2lAzX9Zb3uIU6Ebc/Fmyjo9AWWfnn0AUCHqtevs/8g==}
@@ -2339,6 +2346,8 @@ snapshots:
       '@types/estree': 1.0.8
 
   exsolve@1.0.8: {}
+
+  fast-average-color@9.5.0: {}
 
   fd-slicer@1.1.0:
     dependencies:

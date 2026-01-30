@@ -6,7 +6,7 @@
         <div class="grid grid-cols-2 gap-2">
           <div class="" v-for="item in list" :key="item.tmdbid">
             <var-badge type="danger" :value="item.vote_average" offset-x="-10" offset-y="10">
-              <var-paper :elevation="2" ripple>
+              <var-paper :elevation="2" ripple @click="onClickVideo(item)">
                 <var-image fit="contain" :src="getImageUrl(item)" />
                 <div class="p-x-1 p-y-1" flex="~ col items-start gap-1">
                   <var-ellipsis class="text-left font-600 w-full">{{ item.title }}</var-ellipsis>
@@ -24,6 +24,7 @@
 <script setup>
 import { computed, onMounted, ref } from "vue";
 import { getList } from "@/api/system";
+import { useRouter } from "vue-router";
 
 const loading = ref(true);
 const loadingError = ref(false);
@@ -86,6 +87,17 @@ const getMediaType = computed(() => {
     }
   };
 });
+
+const router = useRouter();
+function onClickVideo(item) {
+  router.push({
+    path: "/detail",
+    query: {
+      poster: item.poster,
+      tmdbid: item.tmdbid,
+    },
+  });
+}
 
 onMounted(() => {
   getTopPicks();

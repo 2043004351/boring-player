@@ -27,6 +27,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
+      "/tmdb": {
+        target: process.env.VITE_TMDB_API_URL, // TMDB API 服务器
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/tmdb/, ""),
+      },
     },
   },
 
